@@ -79,8 +79,8 @@
 				826084EA228EC9B500A3EB15 /* Balham.otf */,
 				826084DF228EC1A900A3EB15 /* Assets.xcassets */,
 				826084E1228EC1A900A3EB15 /* LaunchScreen.storyboard */,
-				826084E4228EC1A900A3EB15 /* Info.plist */,
 				8229FB9E22A0FDC800EC0983 /* Default-568h@2x.png */,
+				826084E4228EC1A900A3EB15 /* Info.plist */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
@@ -344,7 +344,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Y76M773K4Z;
-				INFOPLIST_FILE = OpenQuiz/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/OpenQuiz/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -362,7 +362,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Y76M773K4Z;
-				INFOPLIST_FILE = OpenQuiz/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/OpenQuiz/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
