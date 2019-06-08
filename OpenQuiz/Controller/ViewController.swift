@@ -26,6 +26,9 @@ class ViewController: UIViewController {
         
         let panGestureRecognizer = UIPanGestureRecognizer(target: self, action: #selector(dragQuestionView(_:)))
         questionView.addGestureRecognizer(panGestureRecognizer)
+        
+        let answerIsTrue = Notification.Name(rawValue: "answerIsTrue")
+        NotificationCenter.default.addObserver(self, selector: #selector(scoreGoesUp), name: answerIsTrue, object: nil)
     }
     
     @objc func questionsLoaded() {
@@ -112,6 +115,7 @@ class ViewController: UIViewController {
                 self.showQuestionView()
             }
         }
+        scoreGoesUp()
     }
 
     private func showQuestionView() {
@@ -129,6 +133,15 @@ class ViewController: UIViewController {
         UIView.animate(withDuration: 0.4, delay: 0, usingSpringWithDamping: 0.5, initialSpringVelocity: 0.5, options:[], animations: {
             self.questionView.transform = .identity
             }, completion: nil)
+    }
+    
+    @objc func scoreGoesUp() {
+        scoreLabel.transform = .identity
+        scoreLabel.transform = CGAffineTransform(rotationAngle: 9)
+        
+        UIView.animate(withDuration: 0.5) {
+            self.scoreLabel.transform = .identity
+        }
     }
 }
 

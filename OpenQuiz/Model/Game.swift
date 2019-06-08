@@ -42,6 +42,9 @@ class Game {
     func answerCurrentQuestion(with answer : Bool) {
         if (currentQuestion.isCorrect && answer) || (!currentQuestion.isCorrect && !answer) {
             score += 1
+            let name = Notification.Name(rawValue: "answerIsTrue")
+            let notification = Notification(name: name)
+            NotificationCenter.default.post(notification)
         }
         goToNextQuestion()
     }
