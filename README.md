@@ -1,1 +1,3 @@
+SCHOOL PROJECT
+
 # OpenQuiz
